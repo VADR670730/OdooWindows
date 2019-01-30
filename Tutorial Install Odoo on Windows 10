@@ -1,0 +1,46 @@
+Prepare
+ Install Python 3.5+ (Install Python versi 3.5 keatas)
+	1. Download dari official Python 3 installer (https://www.python.org/ftp/python/3.5.4/python-3.5.4-amd64.exe)
+	2. Jika telah selesai didownlaod, maka jalankan installer
+	3. Pilih lokasi untuk menginstall Python
+	4. Untuk kostumisasi jangan lupa mengaktifkan "Add python.exe to path" agar perintah python dikenali pada CMD (Command Prompt).
+	5. Finish
+	6. Uji coba Python, buka cmd, kemudian ketik perintah "python" untuk masuk ke Python Shell dari CMD.
+	7. Finish
+
+ Install PostgreSQL (Sebagai database local Odoo)
+	1.Download PostgreSQL dari https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+	2.Install PostgreSQL
+	3.Selanjutnya mengatur variable environment denag Add PostgreSQL bin (deafult : C:\Program Files\PostgreSQL\9.4\bin) ke PATH ( buka Control Panel->System and Security->System.
+	Klik Advanced system settings -> Environment Variables. Pada System variables, pilih Path, klik Edit. Pada Variable value, tambahkan C:\Program Files\PostgreSQL\9.4\bin
+	4.Buat postgres user dengan password, dengan cara jalankan pgAdminIII gui, double klik untuk membuat sebuah koneksi.
+	kemudian Edit -> New Object -> New Login Rule lalu masukan username di bagian Role Name (ex : odoo)
+	kemudian buka tab Defenition dan masukan password (ex : odoo), lalu OK.
+
+ Install psycopg dari http://www.stickpeople.com/projects/python/win-psycopg/ 
+ Kemudian gunakan perintah "pip" untuk menginstall depedensi dari cmd.exe (arahkan ke path actual tempat mengunduh Odoo)
+	misalnya : kita mengunduh odoo di direktori E:\Odoo\odoo-12.0
+	kemuadian jalankan cmd dan ketikan perintah berikut :
+	 E:
+	 cd /Odoo/odoo-12.0/
+	 pip.exe install -r requirement.txt
+
+	 Jika menemukan packages yang belum keinstall maka gunakan perintah
+	 pip install -U "nama packages"
+
+ Install paket RTLCSS via nodejs
+	1. install nodejs dari https://nodejs.org/en/download/ , kemudian restart (untuk memperbarui PATH) 
+	2. Install rtlcss (cmd -> ketikan perintah " npm install -g rtlcss "
+	3. Kemudian update System Environment PATH dengan menambahkan folder lokasi dimana rtlcss.cmd ,biasanya :
+		C:\Users\<user>\AppData\Roaming\npm\
+
+ Download odoo dari git
+	1.Jika belum install gitbash install terlebih dahulu dari https://git-scm.com/download/
+	2.Buka folder E:\Odoo\odoo-12.0
+	3.Clone odoo (buka cmd-> ketikan perintah " git clone https://github.com/odoo/odoo.git "
+
+ Running Odoo
+	Buka cmd.exe
+	C: \ YourOdooPath> python3 odoo-bin -w odoo -r odoo --addons-path = addons, .. / mymodules --db-filter = mydb $
+	Buka Browser 
+	localhost: 8069
