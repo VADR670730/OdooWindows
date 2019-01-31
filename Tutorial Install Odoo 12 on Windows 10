@@ -16,6 +16,11 @@ Prepare
 	4.Buat postgres user dengan password, dengan cara jalankan pgAdminIII gui, double klik untuk membuat sebuah koneksi.
 	kemudian Edit -> New Object -> New Login Rule lalu masukan username di bagian Role Name (ex : odoo)
 	kemudian buka tab Defenition dan masukan password (ex : odoo), lalu OK.
+	
+ Download odoo dari git
+	1.Jika belum install gitbash install terlebih dahulu dari https://git-scm.com/download/
+	2.Buka folder E:\Odoo\odoo-12.0
+	3.Clone odoo (buka cmd-> ketikan perintah " git clone https://github.com/odoo/odoo.git "
 
  Install psycopg dari http://www.stickpeople.com/projects/python/win-psycopg/ 
  Kemudian gunakan perintah "pip" untuk menginstall depedensi dari cmd.exe (arahkan ke path actual tempat mengunduh Odoo)
@@ -34,10 +39,6 @@ Prepare
 	3. Kemudian update System Environment PATH dengan menambahkan folder lokasi dimana rtlcss.cmd ,biasanya :
 		C:\Users\<user>\AppData\Roaming\npm\
 
- Download odoo dari git
-	1.Jika belum install gitbash install terlebih dahulu dari https://git-scm.com/download/
-	2.Buka folder E:\Odoo\odoo-12.0
-	3.Clone odoo (buka cmd-> ketikan perintah " git clone https://github.com/odoo/odoo.git "
 
  Running Odoo
 	Buka cmd.exe
